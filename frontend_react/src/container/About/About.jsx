@@ -4,7 +4,10 @@ import { motion } from 'framer-motion';
 import './About.scss';
 
 const abouts = [
-  { title: 'Web Development', description: 'I build website with my full stack experience', imgUrl: '' }
+  { title: 'Web Development', description: 'I build website with my full stack experience', imgUrl: '' },
+  { title: 'Web Design', description: 'I build website with my full stack experience', imgUrl: '' },
+  { title: 'UI/UX', description: 'I build website with my full stack experience', imgUrl: '' },
+  { title: 'Backend Dev', description: 'I build website with my full stack experience', imgUrl: '' }
 ];
 
 const About = () => {
@@ -18,7 +21,11 @@ const About = () => {
     </h2>
 
       <div className="app__profiles">
-
+        {abouts.map((about, index) => (
+          <motion.div>
+            
+          </motion.div>
+        ))}
       </div>
 
     </>

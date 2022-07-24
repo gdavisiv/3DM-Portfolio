@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+import { images } from '../../constants';
 import './About.scss';
 
 const abouts = [
-  { title: 'Web Development', description: 'I build website with my full stack experience', imgUrl: '' },
-  { title: 'Web Design', description: 'I build website with my full stack experience', imgUrl: '' },
-  { title: 'UI/UX', description: 'I build website with my full stack experience', imgUrl: '' },
-  { title: 'Backend Dev', description: 'I build website with my full stack experience', imgUrl: '' }
+  { title: 'Web Development', description: 'I build website with my full stack experience', imgUrl: images.about01 },
+  { title: 'Web Design', description: 'I build website with my full stack experience', imgUrl: images.about02 },
+  { title: 'UI/UX', description: 'I build website with my full stack experience', imgUrl: images.about03 },
+  { title: 'Backend Dev', description: 'I build website with my full stack experience', imgUrl: images.about4 }
 ];
 
 const About = () => {
@@ -30,8 +31,8 @@ const About = () => {
             key={about.title + index}
           >
             <img src={about.imgUrl} alt={about.title} />
-              <h2 className="bold-text" style={{ marginTop: 20}}>{about.title}</h2>
-
+              <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
+                < p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
         ))}
       </div>

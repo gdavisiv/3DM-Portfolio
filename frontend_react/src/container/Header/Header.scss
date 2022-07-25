@@ -115,7 +115,17 @@
       img {
         width: 60%;
         height: 60%;
+        animation: rotation 120s infinite linear;
       }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }      
     }
   
     // circles with different height & width
@@ -188,7 +198,17 @@
         z-index: 0;
         width: 100%;
         height: 90%;
-    }
+        animation: rotation 15s infinite linear;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }  
 
     @media screen and (max-width: 1200px) {
         margin: 2rem 0;

@@ -5,20 +5,20 @@ import { images } from '../../constants';
 import './About.scss';
 
 const abouts = [
-  { title: 'Web Development', description: 'I build website with my full stack experience', imgUrl: images.about01 },
-  { title: 'Web Design', description: 'I build website with my full stack experience', imgUrl: images.about02 },
-  { title: 'UI/UX', description: 'I build website with my full stack experience', imgUrl: images.about03 },
-  { title: 'Backend Dev', description: 'I build website with my full stack experience', imgUrl: images.about4 }
+  { title: 'Full Stack Web Dev', description: 'I build website with my full stack experience', imgUrl: images.about01 },
+  { title: 'iOS Dev', description: 'I build website with my full stack experience', imgUrl: images.about02 },
+  { title: 'OpenCV/AI/ML', description: 'I build website with my full stack experience', imgUrl: images.about03 },
+  { title: 'Web 3.0', description: 'I build website with my full stack experience', imgUrl: images.about04 }
 ];
 
 const About = () => {
   return (
     <>
     <h2 className="head-text">Simplicity
-      <span>is about subtracting the obvious</span>
+      <span> is about subtracting the obvious</span>
       <br />
       and
-      <span>adding the meaningful. - John Maeda</span>
+      <span> adding the meaningful. - John Maeda</span>
     </h2>
 
       <div className="app__profiles">
@@ -36,7 +36,6 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-
     </>
   );
 };

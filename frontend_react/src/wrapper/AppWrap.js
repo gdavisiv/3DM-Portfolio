@@ -5,6 +5,7 @@ import { NavigatonDots, SocialMedia } from '../components'
 //the function HOC
 const AppWrap = (Component, idName, classNames) => function HOC() {
   return (
+    // eslint-disable-next-line
     <div id={idName} className={'app__container ${classNames}'}>
       <SocialMedia />
 

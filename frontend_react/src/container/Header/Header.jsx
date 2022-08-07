@@ -35,7 +35,7 @@ const Header = () => {
 
           <div className="tag-cmp app__flex">
             <p className="p-text">Web Developer</p>
-            <p className="p-text">OpenCV AI/ML</p>
+            <p className="p-text">AI/ML Implementation</p>
             <p className="p-text">iOS Developer</p>
           </div>
         </div>
@@ -61,7 +61,8 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.api, images.node, images.sass].map((circle, index) => (
+        {[images.react, images.redux, images.saas].map((circle, index) => (
+          // eslint-disable-next-line
           <div className="circle-cmp app__flex" key={'circle-${index}'}>
             <img src={circle} alt="circle" />
           </div>

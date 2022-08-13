@@ -22,11 +22,11 @@
 
   img {
     width: 90px;
-    height: 35px;
+    height: 80px;
 
     @media screen and (min-width: 2000px) {
       width: 180px;
-      height: 70px;
+      height: 160px;
     }
   }
 }

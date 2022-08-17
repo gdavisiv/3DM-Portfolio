@@ -33,7 +33,7 @@ const Services = () => {
 
       <div className="app__services-container">
         <motion.div className="app__services-list">
-          {services.map((services) => (
+          {services?.map((services) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
@@ -48,7 +48,7 @@ const Services = () => {
           ))}
         </motion.div>
         <motion.div className="app__services-exp">
-          {experiences.works.map((work) => (
+          {experiences?.works?.map((work) => (
             <>
             <motion.div
               whileInView={{ opacity: [0, 1] }}

@@ -29,63 +29,67 @@ const Services = () => {
 
   return (
     <>
-      <h2 className="head-text">The Services we provide our clients</h2>
+      <h2 className="head-text">Services we provide our Clientelle</h2>
 
       <div className="app__services-container">
         <motion.div className="app__services-list">
-          {services?.map((services) => (
+          {services.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="app__services-item app__flex"
-              key={services.name}
+              key={skill.name}
             >
-              <div className="app__flex" style={{backgroundColor: services.bgColor }}>
-                <img src={urlFor(services.icon)} alt={services.name} />
+              <div
+                className="app__flex"
+                style={{ backgroundColor: skill.bgColor }}
+              >
+                <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{services.name}</p>
+              <p className="p-text">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
-        <motion.div className="app__services-exp">
-          {experiences?.works?.map((experience) => (
+        <div className="app__services-exp">
+          {experiences.map((experience) => (
             <motion.div
-              className="app__skills-exp-item"
+              className="app__services-exp-item"
               key={experience.year}
             >
-              <div className="app__skills-exp-year">
+              <div className="app__services-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
-              <motion.div className="app__skills-exp-works">
-
+              <motion.div className="app__services-exp-works">
+                {experience.works.map((work) => (
+                  <>
+                    <motion.div
+                      whileInView={{ opacity: [0, 1] }}
+                      transition={{ duration: 0.5 }}
+                      className="app__services-exp-work"
+                      data-tip
+                      data-for={work.name}
+                      key={work.name}
+                    >
+                      <h4 className="bold-text">{work.name}</h4>
+                      <p className="p-text">{work.company}</p>
+                    </motion.div>
+                    <ReactTooltip
+                      id={work.name}
+                      effect="solid"
+                      arrowColor="#fff"
+                      className="services-tooltip"
+                    >
+                      {work.desc}
+                    </ReactTooltip>
+                  </>
+                ))}
               </motion.div>
             </motion.div>
-/*             <>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
-              className="app__services-exp-work"
-              data-tip
-              data-for={work.name}
-              key={work.name}
-            >
-              <h4 className="bold-text">{work.name}</h4>
-              <p className="p-text">{work.company}</p>             
-            </motion.div>
-            <ReactTooltip
-              id={work.name}
-              effect="solid"
-              arrowColor="#fff"
-              className="skills-tooltip"
-            >
-              {work.desc}
-            </ReactTooltip>
-            </> */
           ))}
-        </motion.div>
+        </div>
       </div>
     </>
   );
-}
+};
 
 export default Services;
